@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import { CounterProvider } from './CounterContext'; // Import CounterProvider
+import CounterDisplay from './CounterDisplay'; // Import CounterDisplay component
+import CounterControls from './CounterControls'; // Import CounterControls component
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CounterProvider>
+      <div className="App">
+        <h1>React Counter with Context</h1>
+        <CounterDisplay /> {/* This will display the current counter value */}
+        <CounterControls /> {/* This will control the increment/decrement */}
+      </div>
+    </CounterProvider>
   );
 }
 
