@@ -1,16 +1,15 @@
-// App.js
 import React from 'react';
-import { CounterProvider } from './CounterContext'; // Import CounterProvider
-import CounterDisplay from './CounterDisplay'; // Import CounterDisplay component
-import CounterControls from './CounterControls'; // Import CounterControls component
+import { CounterProvider } from './CounterContext';
+import CounterDisplay from './CounterDisplay';
+import CounterControls from './CounterControls';
 
 function App() {
   return (
     <CounterProvider>
       <div className="App">
-        <h1>React Counter with Context</h1>
-        <CounterDisplay /> {/* This will display the current counter value */}
-        <CounterControls /> {/* This will control the increment/decrement */}
+        <h1>Counter Application</h1>
+        <CounterDisplay />
+        <CounterControls />
       </div>
     </CounterProvider>
   );
